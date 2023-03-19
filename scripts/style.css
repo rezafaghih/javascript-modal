@@ -1,0 +1,112 @@
+
+
+body{
+  background-image: url(../files/Jungle-Rot.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  place-items: center;}
+
+#display-modal-box{
+  position: relative;
+  width: max-content;
+  height: max-content;
+  padding: 10px 40px;
+  font-family: 'Noto Sans Arabic', sans-serif;
+  font-weight: 900;
+  background-color: orangered;
+  color:white;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.75);
+}
+
+.modal-container{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.329);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  place-items: center;
+}
+.modal-box{
+  position: relative;
+  width: 450px;
+  min-height: 300px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+  animation: display-modal 1s 1 forwards;
+  transition: 1000ms;
+}
+
+.modal-box img{
+  width: 120px;
+  image-rendering:pixelated;
+  user-select: none;
+}
+
+.modal-box span{
+  font-family: 'Noto Sans Arabic', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+  color:rgb(22, 33, 53);
+  user-select: none;
+}
+
+.modal-box p{
+  font-family: 'Noto Sans Arabic', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    font-size: 17px;
+    width: 80%;
+  user-select: none;
+  color:rgb(74, 89, 119);
+}
+
+
+#close_button{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+}
+
+@keyframes display-modal {
+  from{
+    bottom: -400px;
+    opacity: 0;
+    filter: blur(7px);
+  }
+  to{
+    bottom: 0;
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes fade {
+  from{
+    bottom: 0;
+    opacity: 1;
+    filter: blur(0px);
+  }
+  to{
+    bottom: -400px;
+    opacity: 0;
+    filter: blur(7px);
+  }
+}
